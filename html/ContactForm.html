@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">Glowify</div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="contact-section">
+
+    <!-- LEFT -->
+    <div class="contact-info">
+        <div class="info-item">
+            <div class="info-icon-box">⚲</div>
+            <div class="info-text">
+                <strong>Address</strong>
+                <span>Lahore, Punjab, Pakistan</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <div class="info-icon-box">✆</div>
+            <div class="info-text">
+                <strong>Call Us</strong>
+                <span>+92 300 1234567</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <div class="info-icon-box">✉</div>
+            <div class="info-text">
+                <strong>Email Us</strong>
+                <span>hello@glowstore.com</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form">
+        <form action="contactformphp.php" method="POST">
+
+            <input type="hidden" name="form_type" value="Contact Form">
+
+            <div class="form-row">
+                <input type="text"  name="name"  placeholder="Your Name"  required>
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <input type="text" name="subject" placeholder="Subject">
+
+            <textarea name="message" placeholder="Message"></textarea>
+
+            <button type="submit" class="send-btn">Send Message</button>
+
+        </form>
+    </div>
+
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+    <h2>Subscribe For Beauty Updates</h2>
+    <p>Get latest beauty deals and skincare tips.</p>
+    <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h2>Glowify</h2>
+            <p>Premium beauty and skincare products designed for elegance and confidence.</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Categories</h3>
+            <a href="#">Makeup</a>
+            <a href="#">Skincare</a>
+            <a href="#">Perfumes</a>
+            <a href="#">Beauty Kits</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Email: glowify@gmail.com</p>
+            <p>Phone: +92 300 1234567</p>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-google-play"></i></a>
+            <a href="#"><i class="fa-brands fa-apple"></i></a>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Glowify Cosmetics. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

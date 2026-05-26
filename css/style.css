@@ -1,0 +1,158 @@
+/* ================================
+   GlowStore — Form Stylesheet
+   style.css
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+/* FORM CARD */
+form {
+    background: #FDF5E6;
+    padding: 30px 25px;
+    border-radius: 14px;
+    border: 1.5px solid #f0c0d0;
+    box-shadow: 0 4px 18px rgba(139, 0, 69, 0.09);
+}
+
+/* FORM TITLE BADGE */
+.form-title {
+    background: #8b0045;
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: table;
+    margin: 0 auto 22px auto;
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 5px 0 13px 0;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111;
+    background: #ffffff;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+input:focus, select:focus {
+    border-color: #8b0045;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 0, 69, 0.12);
+}
+
+/* ROW */
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row input {
+    width: 100%;
+}
+
+/* BUTTON */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+button {
+    width: 160px;
+    padding: 11px;
+    background: #8b0045;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #6a0035;
+    transform: scale(1.04);
+}
+
+/* MAIN LAYOUT */
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 70px;
+    gap: 40px;
+}
+
+/* LEFT SIDE */
+.left {
+    width: 44%;
+    padding-top: 40px;
+}
+
+.left h1 {
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.left p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.left .features {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left .features span {
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* RIGHT SIDE */
+.right {
+    width: 52%;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .main {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .left, .right {
+        width: 100%;
+    }
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
