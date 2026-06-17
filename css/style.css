@@ -27,7 +27,7 @@ form {
 
 /* FORM TITLE BADGE */
 .form-title {
-    background: #8b0045;
+    background:#d63384;
     color: white;
     text-align: center;
     padding: 10px 30px;
@@ -56,7 +56,7 @@ input::placeholder {
 }
 
 input:focus, select:focus {
-    border-color: #8b0045;
+    border-color: #d63384;
     outline: none;
     box-shadow: 0 0 0 3px rgba(139, 0, 69, 0.12);
 }
@@ -81,7 +81,7 @@ input:focus, select:focus {
 button {
     width: 160px;
     padding: 11px;
-    background: #8b0045;
+    background: #d63384;
     color: white;
     border: none;
     border-radius: 25px;
@@ -93,7 +93,7 @@ button {
 }
 
 button:hover {
-    background: #6a0035;
+    background: #d63384;
     transform: scale(1.04);
 }
 

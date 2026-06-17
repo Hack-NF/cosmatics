@@ -48,7 +48,7 @@ body {
 .info-icon-box {
     width: 40px;
     height: 40px;
-    background: #8b0045;
+    background:#d63384;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #8b0045;
+    border-color: #d63384;
     box-shadow: 0 0 0 3px rgba(139,0,69,0.1);
 }
 
@@ -117,7 +117,7 @@ body {
     display: block;
     margin: 0 auto;
     padding: 12px 36px;
-    background: #8b0045;
+    background: #d63384;
     color: white;
     border: none;
     border-radius: 6px;
