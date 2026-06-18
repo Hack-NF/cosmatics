@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Quiz - Glowify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/skinquiz.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">Glowify</div>
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="OrderForm.html">Order</a></li>
+            <li><a href="catagories.html">Categories</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="SkinQuiz.html">Skin Quiz</a></li>
+            <li><a href="ContactForm.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- SLIDER -->
+<div class="slider">
+
+    <div class="slide slide-1 active">
+        <div class="slide-content">
+            <!-- IMAGE: skin care image yahan lagao -->
+            <img src="img1.jfif" alt="Dry Skin" class="slide-img">
+            <h2>Is Your Skin Feeling Dry? 🌵</h2>
+            <p>Discover products that deeply hydrate and restore your skin's natural glow.</p>
+        </div>
+    </div>
+
+    <div class="slide slide-2">
+        <div class="slide-content">
+            <img src="img2.jfif" alt="Oily Skin" class="slide-img">
+            <h2>Struggling With Oily Skin? ✨</h2>
+            <p>Find the perfect mattifying products that control shine all day long.</p>
+        </div>
+    </div>
+
+    <div class="slide slide-3">
+        <div class="slide-content">
+            <img src="imag4.jfif" alt="Combination Skin" class="slide-img">
+            <h2>Combination Skin? ⚖️</h2>
+            <p>Balance your skin with products designed for every zone of your face.</p>
+        </div>
+    </div>
+
+    <div class="slide slide-4">
+        <div class="slide-content">
+            <img src="img5.jpg" alt="Sensitive Skin" class="slide-img">
+            <h2>Sensitive Skin Needs Care 🌸</h2>
+            <p>Gentle, fragrance-free products that soothe and protect your skin.</p>
+        </div>
+    </div>
+
+    <div class="slide slide-5">
+        <div class="slide-content">
+            <img src="img3.jpeg" alt="Glowing Skin" class="slide-img">
+            <h2>Achieve Your Perfect Glow 💄</h2>
+            <p>Take our quiz and get personalized skincare recommendations just for you!</p>
+        </div>
+    </div>
+
+    <!-- ARROWS -->
+    <button class="slider-arrow prev" onclick="changeSlide(-1)">&#8249;</button>
+    <button class="slider-arrow next" onclick="changeSlide(1)">&#8250;</button>
+
+    <!-- DOTS -->
+    <div class="slider-dots">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+        <div class="dot" onclick="goToSlide(3)"></div>
+        <div class="dot" onclick="goToSlide(4)"></div>
+    </div>
+
+</div>
+
+<!-- MAIN SECTION -->
+<div class="quiz-main">
+
+    <!-- LEFT -->
+    <div class="quiz-left">
+        <h2>Find Your Perfect Skincare Routine ✨</h2>
+        <p>Answer 4 simple questions and we'll recommend the best products for your skin type!</p>
+
+        <div class="point-item">
+            <div class="point-icon">🔬</div>
+            <div class="point-text">
+                <strong>Science Based</strong>
+                <span>Our recommendations are based on dermatologist approved formulas.</span>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <div class="point-icon">💄</div>
+            <div class="point-text">
+                <strong>Personalized For You</strong>
+                <span>Every skin is unique — get products tailored to your exact needs.</span>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <div class="point-icon">🌿</div>
+            <div class="point-text">
+                <strong>Natural Ingredients</strong>
+                <span>All products contain natural, skin-friendly ingredients.</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT QUIZ -->
+    <div class="quiz-right">
+
+        <!-- PROGRESS BAR -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress" style="width:0%"></div>
+        </div>
+
+        <!-- QUESTION 1 -->
+        <div class="quiz-card active" id="q1">
+            <div class="question-number">Question 1 of 4</div>
+            <h2>How does your skin feel in the morning?</h2>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q1', 'dry')">
+                    <span>🌵</span> Tight and dry
+                </button>
+                <button class="option-btn" onclick="answer('q1', 'oily')">
+                    <span>✨</span> Shiny and greasy
+                </button>
+                <button class="option-btn" onclick="answer('q1', 'combination')">
+                    <span>⚖️</span> Oily on forehead/nose, dry on cheeks
+                </button>
+                <button class="option-btn" onclick="answer('q1', 'sensitive')">
+                    <span>🌸</span> Irritated or red
+                </button>
+            </div>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="quiz-card" id="q2">
+            <div class="question-number">Question 2 of 4</div>
+            <h2>What is your main skin concern?</h2>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q2', 'acne')">
+                    <span>😟</span> Acne and breakouts
+                </button>
+                <button class="option-btn" onclick="answer('q2', 'dullness')">
+                    <span>😴</span> Dull and tired skin
+                </button>
+                <button class="option-btn" onclick="answer('q2', 'darkspots')">
+                    <span>🔍</span> Dark spots and uneven tone
+                </button>
+                <button class="option-btn" onclick="answer('q2', 'dryness')">
+                    <span>💧</span> Dryness and flakiness
+                </button>
+            </div>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="quiz-card" id="q3">
+            <div class="question-number">Question 3 of 4</div>
+            <h2>How much water do you drink daily?</h2>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q3', 'less')">
+                    <span>🥤</span> Less than 4 glasses
+                </button>
+                <button class="option-btn" onclick="answer('q3', 'medium')">
+                    <span>💧</span> 4 to 7 glasses
+                </button>
+                <button class="option-btn" onclick="answer('q3', 'more')">
+                    <span>🚿</span> More than 8 glasses
+                </button>
+            </div>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="quiz-card" id="q4">
+            <div class="question-number">Question 4 of 4</div>
+            <h2>What is your age range?</h2>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q4', 'teen')">
+                    <span>🌟</span> Under 20
+                </button>
+                <button class="option-btn" onclick="answer('q4', 'twenties')">
+                    <span>💃</span> 20s
+                </button>
+                <button class="option-btn" onclick="answer('q4', 'thirties')">
+                    <span>👩</span> 30s
+                </button>
+                <button class="option-btn" onclick="answer('q4', 'forties')">
+                    <span>🌹</span> 40s and above
+                </button>
+            </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="result-card" id="result">
+            <div class="result-header">
+                <h2>Your Skin Profile 🌸</h2>
+                <p>Based on your answers, here are your perfect products!</p>
+                <div class="skin-type-badge" id="skin-badge"></div>
+            </div>
+            <div class="products-title">💄 Recommended Products</div>
+            <div class="products-grid" id="products-grid"></div>
+            <div class="tips-section">
+                <h4>💡 Skincare Tips For You</h4>
+                <ul id="tips-list"></ul>
+            </div>
+            <button class="restart-btn" onclick="restart()">🔄 Take Quiz Again</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+    <h2>Subscribe For Beauty Updates</h2>
+    <p>Get latest beauty deals and skincare tips.</p>
+    <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2>Glowify</h2>
+            <p>Premium beauty and skincare products designed for elegance and confidence.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-box">
+            <h3>Categories</h3>
+            <a href="#">Makeup</a>
+            <a href="#">Skincare</a>
+            <a href="#">Perfumes</a>
+            <a href="#">Beauty Kits</a>
+        </div>
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Email: glowify@gmail.com</p>
+            <p>Phone: +92 300 1234567</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-google-play"></i></a>
+            <a href="#"><i class="fa-brands fa-apple"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Glowify Cosmetics. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+// SLIDER
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function goToSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+function changeSlide(dir) { goToSlide(currentSlide + dir); }
+
+// Auto slide
+setInterval(() => changeSlide(1), 3500);
+
+// QUIZ
+const answers = {};
+const totalQuestions = 4;
+
+const products = {
+    dry: [
+        { emoji: '💧', name: 'Hydrating Serum', desc: 'Deep moisture boost' },
+        { emoji: '🧴', name: 'Rich Moisturizer', desc: 'All day hydration' },
+        { emoji: '🌿', name: 'Nourishing Face Oil', desc: 'Restore skin barrier' },
+        { emoji: '🛁', name: 'Gentle Cleanser', desc: 'Non-drying formula' }
+    ],
+    oily: [
+        { emoji: '🧼', name: 'Foaming Cleanser', desc: 'Deep pore cleansing' },
+        { emoji: '🌺', name: 'Mattifying Primer', desc: 'Controls shine all day' },
+        { emoji: '💊', name: 'Salicylic Toner', desc: 'Unclogs pores' },
+        { emoji: '☁️', name: 'Oil-Free Moisturizer', desc: 'Light hydration' }
+    ],
+    combination: [
+        { emoji: '⚖️', name: 'Balancing Toner', desc: 'For all zones' },
+        { emoji: '🌸', name: 'Lightweight Serum', desc: 'Hydrates without grease' },
+        { emoji: '🧴', name: 'Gel Moisturizer', desc: 'Non-comedogenic' },
+        { emoji: '✨', name: 'Clay Mask', desc: 'Weekly deep cleanse' }
+    ],
+    sensitive: [
+        { emoji: '🌼', name: 'Calming Cleanser', desc: 'Fragrance free' },
+        { emoji: '🌿', name: 'Aloe Vera Gel', desc: 'Soothes redness' },
+        { emoji: '💆', name: 'Sensitive Moisturizer', desc: 'Hypoallergenic' },
+        { emoji: '🛡️', name: 'SPF Sunscreen', desc: 'Mineral based' }
+    ]
+};
+
+const tips = {
+    dry: ['Drink at least 8 glasses of water daily','Use lukewarm water — never hot','Apply moisturizer right after washing face','Avoid alcohol-based products'],
+    oily: ['Wash face twice daily — not more','Use blotting papers during the day','Never skip moisturizer','Use clay mask once a week'],
+    combination: ['Use different products for T-zone and cheeks','Gentle exfoliation twice a week','Lightweight sunscreen daily','Balance diet with fruits and vegetables'],
+    sensitive: ['Always patch test new products','Avoid fragrances and harsh chemicals','Use mineral sunscreen daily','Keep skincare routine simple']
+};
+
+function answer(question, value) {
+    answers[question] = value;
+    const current = document.getElementById(question);
+    current.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
+    event.target.closest('.option-btn').classList.add('selected');
+    const qNum = parseInt(question.replace('q', ''));
+    const progress = (qNum / totalQuestions) * 100;
+    document.getElementById('progress').style.width = progress + '%';
+    setTimeout(() => {
+        current.classList.remove('active');
+        if (qNum < totalQuestions) {
+            document.getElementById('q' + (qNum + 1)).classList.add('active');
+        } else {
+            showResult();
+        }
+    }, 400);
+}
+
+function showResult() {
+    const skinType = answers['q1'];
+    document.getElementById('progress').style.width = '100%';
+    const skinNames = { dry: 'Dry Skin 🌵', oily: 'Oily Skin ✨', combination: 'Combination Skin ⚖️', sensitive: 'Sensitive Skin 🌸' };
+    document.getElementById('skin-badge').textContent = skinNames[skinType];
+    const grid = document.getElementById('products-grid');
+    grid.innerHTML = '';
+    products[skinType].forEach(p => {
+        grid.innerHTML += `<div class="product-item"><div class="product-emoji">${p.emoji}</div><div class="product-name">${p.name}</div><div class="product-desc">${p.desc}</div></div>`;
+    });
+    const tipsList = document.getElementById('tips-list');
+    tipsList.innerHTML = '';
+    tips[skinType].forEach(t => { tipsList.innerHTML += `<li>${t}</li>`; });
+    document.getElementById('result').classList.add('active');
+}
+
+function restart() {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    document.querySelectorAll('.quiz-card').forEach(c => c.classList.remove('active'));
+    document.getElementById('result').classList.remove('active');
+    document.getElementById('progress').style.width = '0%';
+    document.getElementById('q1').classList.add('active');
+}
+</script>
+
+</body>
+</html>
