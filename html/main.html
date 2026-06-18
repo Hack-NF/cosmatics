@@ -35,6 +35,7 @@
     </header>
 
 
+
     <!-- HERO SECTION -->
 
     <section class="hero">
@@ -50,43 +51,42 @@
                 Discover premium makeup and skincare products.
             </p>
 
-            <button>Shop Now</button>
+            <button >Shop Now</button>
 
         </div>
 
         <div class="hero-image">
 
-            <img src="../images/noor/1.webp" alt="Cosmetics">
+            <img src="../images/noor/hero1.jpg" alt="Cosmetics">
 
         </div>
 
     </section>
-
 
     <!-- CATEGORIES -->
 
     <section class="categories">
 
         <div class="card">
-            <img src="../images/noor/lipglose1.jfif" alt="">
+            <img src="../images/noor/lipstics.jfif" alt="">
             <h3>Lipsticks</h3>
             <p>Soft matte and glossy shades.</p>
         </div>
 
         <div class="card">
-            <img src="images/skincare.png" alt="">
+            <img src="../images/noor/skincare.webp" alt="">
             <h3>Skincare</h3>
             <p>Glow naturally with skincare.</p>
         </div>
 
         <div class="card">
-            <img src="images/makeup.png" alt="">
+            <img src="../images/noor/makeupkit.jfif" alt="">
             <h3>Makeup Kits</h3>
             <p>Complete beauty essentials.</p>
         </div>
 
         <div class="card">
-            <img src="images/cream.png" alt="">
+            <img src="../images/noor/facecream.jpg" alt="">
             <h3>Face Cream</h3>
             <p>Healthy and soft skin care.</p>
         </div>
@@ -103,7 +103,7 @@
 
             <div class="product-card">
 
-                <img src="images/products/product1.jpg" alt="">
+                <img src="../images/noor/mattelipstic.webp" alt="">
 
                 <h4>Matte Lipstick</h4>
 
@@ -114,7 +114,7 @@
 
             <div class="product-card">
 
-                <img src="images/products/product2.jpg" alt="">
+                <img src="../images/noor/faceserum.jpg" alt="">
 
                 <h4>Face Serum</h4>
 
@@ -125,7 +125,7 @@
 
             <div class="product-card">
 
-                <img src="images/products/product3.jpg" alt="">
+                <img src="../images/noor/perfume.jpg" alt="">
 
                 <h4>Luxury Perfume</h4>
 
@@ -177,7 +177,7 @@
 
     <div class="collection-image">
 
-        <img src="images/collection.jpg" alt="">
+        <img src="../images/noor/primium.jpg" alt="">
 
     </div>
 
@@ -333,6 +333,39 @@
     </div>
 
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".card, .product-card, .review-card")
+.forEach(el => {
+    el.classList.add("hidden");
+    observer.observe(el);
+});
+</script>
+
+<script>
+const subscribeBtn = document.querySelector(".newsletter-box button");
+
+subscribeBtn.addEventListener("click", () => {
+
+    const email =
+    document.querySelector(".newsletter-box input").value;
+
+    if(email === ""){
+        alert("Please enter your email");
+    }
+    else{
+        alert("Thank you for subscribing!");
+    }
+});
+</script>
 
 </body>
 </html>
