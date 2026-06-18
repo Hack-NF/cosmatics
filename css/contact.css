@@ -48,7 +48,7 @@ body {
 .info-icon-box {
     width: 40px;
     height: 40px;
-    background:#d63384;
+    background:#8e1e5b;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #d63384;
+    border-color: #8e1e5b;
     box-shadow: 0 0 0 3px rgba(139,0,69,0.1);
 }
 
@@ -117,7 +117,7 @@ body {
     display: block;
     margin: 0 auto;
     padding: 12px 36px;
-    background: #d63384;
+    background: #8e1e5b;
     color: white;
     border: none;
     border-radius: 6px;
@@ -128,7 +128,7 @@ body {
     width: auto;
 }
 
-.send-btn:hover { background: #6a0035; }
+.send-btn:hover { background: #8e1e5b; }
 
 @media(max-width: 700px) {
     .contact-section {
